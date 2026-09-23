@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Leadership Gathering | Rizan</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display, Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Theme Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxuryDark: '#09090b',
+                        luxuryCard: '#121215',
+                        luxuryCardHover: '#18181b',
+                        luxuryBorder: '#27272a',
+                        luxuryBorderLight: '#3f3f46',
+                        luxuryGray: '#a1a1aa',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        mono: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Smooth Scrollbar & Image Filter Styling */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+        .bw-image {
+            filter: grayscale(100%) contrast(110%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        .bw-image:hover {
+            filter: grayscale(0%) contrast(105%);
+        }
+
+        .editorial-border {
+            border-image: linear-gradient(to bottom, rgba(255,255,255,0.15), rgba(255,255,255,0.02)) 1;
+        }
+    </style>
+</head>
+<body class="bg-luxuryDark text-zinc-100 font-sans antialiased selection:bg-white selection:text-black min-h-screen flex flex-col">
+
+    <!-- Fancy Minimalist Navigation Bar -->
+    <header class="bg-luxuryDark/90 backdrop-blur-md border-b border-luxuryBorder sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center font-serif font-bold text-lg text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                    R
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif tracking-widest text-sm uppercase font-semibold text-white">Showcase</span>
+                    <span class="font-mono text-[10px] text-luxuryGray tracking-wider">Rizan / KN BATAM</span>
+                </div>
+            </a>
+
+            <!-- Event Sub-navigation Links -->
+            <nav class="hidden md:flex items-center gap-6 text-xs font-mono tracking-widest text-luxuryGray uppercase">
+                <a href="#overview" class="hover:text-white transition-colors">01. Overview</a>
+                <a href="#storyline" class="hover:text-white transition-colors">02. Highlights</a>
+                <a href="#gallery" class="hover:text-white transition-colors">03. Gallery</a>
+                <a href="#outcomes" class="hover:text-white transition-colors">04. Impact</a>
+            </nav>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 bg-white/5 text-xs font-mono text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                <span>BATAM 2025</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="overview" class="relative border-b border-luxuryBorder py-16 lg:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="flex flex-wrap items-center gap-3 text-xs font-mono text-luxuryGray uppercase tracking-widest mb-6">
+                <span class="px-3 py-1 rounded-sm border border-luxuryBorder bg-zinc-900/80 text-white">
+                    <i class="fa-regular fa-calendar mr-2"></i>APRIL 24, 2025
+                </span>
+                <span class="px-3 py-1 rounded-sm border border-luxuryBorder bg-zinc-900/80 text-white">
+                    <i class="fa-solid fa-location-dot mr-2"></i>BATAM, KEPULAUAN RIAU
+                </span>
+                <span class="px-3 py-1 rounded-sm border border-white/20 bg-white/10 text-white font-semibold">
+                    <i class="fa-solid fa-user-gear mr-2"></i>OPERATOR
+                </span>
+            </div>
+
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight max-w-4xl">
+                School Leadership & Gathering
+            </h1>
+            <p class="text-lg sm:text-xl text-zinc-400 font-light max-w-2xl mt-4 leading-relaxed">
+                Uniting school principals and educational foundation heads across Batam with Koding Next HQ leadership to champion early computer science education and build strategic academic partnerships.
+            </p>
+
+            <!-- Key Metrics Bar
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 pt-8 border-t border-luxuryBorder/60">
+                <div class="p-4 bg-luxuryCard rounded-lg border border-luxuryBorder">
+                    <div class="font-mono text-2xl sm:text-3xl font-bold text-white">500+</div>
+                    <div class="text-xs font-mono text-luxuryGray uppercase mt-1">Attendees</div>
+                </div>
+                <div class="p-4 bg-luxuryCard rounded-lg border border-luxuryBorder">
+                    <div class="font-mono text-2xl sm:text-3xl font-bold text-white">24</div>
+                    <div class="text-xs font-mono text-luxuryGray uppercase mt-1">Keynotes & Labs</div>
+                </div>
+                <div class="p-4 bg-luxuryCard rounded-lg border border-luxuryBorder">
+                    <div class="font-mono text-2xl sm:text-3xl font-bold text-white">98%</div>
+                    <div class="text-xs font-mono text-luxuryGray uppercase mt-1">Approval Score</div>
+                </div>
+                <div class="p-4 bg-luxuryCard rounded-lg border border-luxuryBorder">
+                    <div class="font-mono text-2xl sm:text-3xl font-bold text-white">$150K</div>
+                    <div class="text-xs font-mono text-luxuryGray uppercase mt-1">Budget Managed</div>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+
+    <!-- Detailed Storyline Section (Alternating Large Images + Explanations) -->
+    <section id="storyline" class="py-16 sm:py-24 space-y-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- BLOCK 1: Landscape Image (16:9) + Text Explanation -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Large Landscape Image (7 cols) -->
+            <div class="lg:col-span-7 group">
+                <div class="relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('images/photo1.jpg', 'Main Keynote Hall - Opening Ceremony')">
+                    <!-- Aspect ratio 16:9 for landscape -->
+                    <div class="aspect-video w-full overflow-hidden">
+                        <img src="images/photo1.jpg" 
+                             alt="Main Keynote Stage" 
+                             class="bw-image w-full h-full object-cover group-hover:scale-105">
+                    </div>
+                    <!-- <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded text-xs font-mono text-zinc-300 border border-white/10">
+                        <i class="fa-solid fa-expand mr-1.5 text-zinc-400"></i> FIG 01 / LANDSCAPE (16:9)
+                    </div> -->
+                </div>
+            </div>
+
+            <!-- Detailed Explanation Side (5 cols) -->
+            <div class="lg:col-span-5 space-y-4">
+                <div class="font-mono text-xs text-luxuryGray tracking-widest uppercase">01 / OPENING KEYNOTE</div>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
+                    Opening Ceremony & Strategic Vision
+                </h2>
+                <div class="w-12 h-0.5 bg-white/40"></div>
+                <p class="text-zinc-300 leading-relaxed text-sm sm:text-base">
+                    Directed the opening ceremony in the main auditorium, setting the overarching theme for the summit. Coordinated technical AV systems, lighting design, and live-streaming setups across three international hubs.
+                </p>
+                <div class="bg-luxuryCard p-4 rounded-lg border border-luxuryBorder text-xs text-zinc-400 space-y-2">
+                    <div class="font-semibold text-white uppercase font-mono">Key Accomplishments:</div>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Managed stage flow for 6 executive speakers without time delays.</li>
+                        <li>Engaged over 1,200 remote virtual participants worldwide.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BLOCK 2: Portrait Image (3:4) + Text Explanation (Flipped Layout) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Detailed Explanation Side (5 cols) - Shown first on desktop -->
+            <div class="lg:col-span-5 space-y-4 lg:order-1 order-2">
+                <div class="font-mono text-xs text-luxuryGray tracking-widest uppercase">02 / INTERACTIVE LABS</div>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
+                    Hands-on Workshop Sessions
+                </h2>
+                <div class="w-12 h-0.5 bg-white/40"></div>
+                <p class="text-zinc-300 leading-relaxed text-sm sm:text-base">
+                    Designed and facilitated high-intensity breakout workshops focusing on rapid prototyping and design thinking methodologies. Teams worked directly with industry mentors to iterate on product challenges.
+                </p>
+                <div class="bg-luxuryCard p-4 rounded-lg border border-luxuryBorder text-xs text-zinc-400 space-y-2">
+                    <div class="font-semibold text-white uppercase font-mono">Key Accomplishments:</div>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Curated 12 unique hands-on working groups.</li>
+                        <li>Provided custom physical and digital design toolkits for all participants.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Large Portrait Image (7 cols) - Aspect ratio 3:4 -->
+            <div class="lg:col-span-7 lg:order-2 order-1 group">
+                <div class="relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer max-w-lg mx-auto lg:max-w-none" onclick="openLightbox('https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop', 'Interactive Workshop Facilitation')">
+                    <div class="aspect-[3/4] max-h-[550px] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=900&auto=format&fit=crop" 
+                             alt="Workshop Session" 
+                             class="bw-image w-full h-full object-cover group-hover:scale-105">
+                    </div>
+                    <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded text-xs font-mono text-zinc-300 border border-white/10">
+                        <i class="fa-solid fa-expand mr-1.5 text-zinc-400"></i> FIG 02 / PORTRAIT (3:4)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BLOCK 3: Landscape Image (3:2) + Text Explanation -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Large Landscape Image (7 cols) -->
+            <div class="lg:col-span-7 group">
+                <div class="relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1600&auto=format&fit=crop', 'Executive Networking Session')">
+                    <div class="aspect-[3/2] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop" 
+                             alt="Networking Session" 
+                             class="bw-image w-full h-full object-cover group-hover:scale-105">
+                    </div>
+                    <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded text-xs font-mono text-zinc-300 border border-white/10">
+                        <i class="fa-solid fa-expand mr-1.5 text-zinc-400"></i> FIG 03 / LANDSCAPE (3:2)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Explanation Side (5 cols) -->
+            <div class="lg:col-span-5 space-y-4">
+                <div class="font-mono text-xs text-luxuryGray tracking-widest uppercase">03 / COLLABORATION</div>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
+                    Executive Networking & Connections
+                </h2>
+                <div class="w-12 h-0.5 bg-white/40"></div>
+                <p class="text-zinc-300 leading-relaxed text-sm sm:text-base">
+                    Curated dedicated networking lounges designed to facilitate high-value discussions between executive leadership, startup founders, and investors.
+                </p>
+                <div class="bg-luxuryCard p-4 rounded-lg border border-luxuryBorder text-xs text-zinc-400 space-y-2">
+                    <div class="font-semibold text-white uppercase font-mono">Key Accomplishments:</div>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Facilitated 150+ pre-scheduled 1-on-1 advisory meetings.</li>
+                        <li>Received 99% satisfaction rating for networking structure.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BLOCK 4: Portrait Image (3:4) + Text Explanation (Flipped Layout) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Detailed Explanation Side (5 cols) - Desktop left -->
+            <div class="lg:col-span-5 space-y-4 lg:order-1 order-2">
+                <div class="font-mono text-xs text-luxuryGray tracking-widest uppercase">04 / PANEL DISCUSSIONS</div>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white leading-tight">
+                    Industry Leader Roundtables
+                </h2>
+                <div class="w-12 h-0.5 bg-white/40"></div>
+                <p class="text-zinc-300 leading-relaxed text-sm sm:text-base">
+                    Moderated and organized thought leadership panel discussions covering emerging industry trends, ethical frameworks, and technological adaptation.
+                </p>
+                <div class="bg-luxuryCard p-4 rounded-lg border border-luxuryBorder text-xs text-zinc-400 space-y-2">
+                    <div class="font-semibold text-white uppercase font-mono">Key Accomplishments:</div>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Hosted 18 industry thought leaders across 4 panel tracks.</li>
+                        <li>Published post-event summary whitepaper downloaded 3k+ times.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Large Portrait Image (7 cols) -->
+            <div class="lg:col-span-7 lg:order-2 order-1 group">
+                <div class="relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer max-w-lg mx-auto lg:max-w-none" onclick="openLightbox('images/photo4', 'Panel Discussion Auditorium')">
+                    <div class="aspect-[3/4] max-h-[550px] w-full overflow-hidden">
+                        <img src="images/photo4.jpg" 
+                             alt="Panel Discussion" 
+                             class="bw-image w-full h-full object-cover group-hover:scale-105">
+                    </div>
+                    <!-- <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded text-xs font-mono text-zinc-300 border border-white/10">
+                        <i class="fa-solid fa-expand mr-1.5 text-zinc-400"></i> FIG 04 / PORTRAIT (3:4)
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Full Black & White Image Gallery Grid (Uniform Aspect Ratio) -->
+    <section id="gallery" class="py-16 bg-zinc-950 border-t border-b border-luxuryBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-luxuryBorder">
+                <div>
+                    <div class="font-mono text-xs text-luxuryGray tracking-widest uppercase">03 / VISUAL ARCHIVE</div>
+                    <h2 class="font-serif text-3xl font-bold text-white mt-1">Complete Photography Gallery</h2>
+                </div>
+                <p class="text-xs font-mono text-zinc-400 mt-2 md:mt-0">Click any frame to launch full-resolution inspection viewer</p>
+            </div>
+
+            <!-- Neat Uniform Gallery Grid (All 4:3 Aspect Ratio) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop', 'Photo 1: Keynote Stage Lighting Setup')">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop" class="bw-image w-full h-full object-cover group-hover:scale-110">
+                    </div>
+                    <div class="p-3 border-t border-luxuryBorder flex justify-between items-center text-xs font-mono text-zinc-400">
+                        <span>01. Keynote Stage</span>
+                        <span class="text-zinc-500">4:3 Uniform</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop', 'Photo 2: Interactive Group Brainstorming')">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" class="bw-image w-full h-full object-cover group-hover:scale-110">
+                    </div>
+                    <div class="p-3 border-t border-luxuryBorder flex justify-between items-center text-xs font-mono text-zinc-400">
+                        <span>02. Workshop Mentor</span>
+                        <span class="text-zinc-500">4:3 Uniform</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1600&auto=format&fit=crop', 'Photo 3: VIP Networking Reception Lounge')">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800&auto=format&fit=crop" class="bw-image w-full h-full object-cover group-hover:scale-110">
+                    </div>
+                    <div class="p-3 border-t border-luxuryBorder flex justify-between items-center text-xs font-mono text-zinc-400">
+                        <span>03. Evening Lounge</span>
+                        <span class="text-zinc-500">4:3 Uniform</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop', 'Photo 4: Q&A Panel Participant')">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop" class="bw-image w-full h-full object-cover group-hover:scale-110">
+                    </div>
+                    <div class="p-3 border-t border-luxuryBorder flex justify-between items-center text-xs font-mono text-zinc-400">
+                        <span>04. Auditorium Q&A</span>
+                        <span class="text-zinc-500">4:3 Uniform</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="group relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1600&auto=format&fit=crop', 'Photo 5: Design Sprint Whiteboarding')">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop" class="bw-image w-full h-full object-cover group-hover:scale-110">
+                    </div>
+                    <div class="p-3 border-t border-luxuryBorder flex justify-between items-center text-xs font-mono text-zinc-400">
+                        <span>05. Whiteboard Sprint</span>
+                        <span class="text-zinc-500">4:3 Uniform</span>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="group relative overflow-hidden rounded-xl border border-luxuryBorder bg-luxuryCard cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop', 'Photo 6: Closing Remarks & Celebration')">
+                    <div class="aspect-[4/3] w-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=800&auto=format&fit=crop" class="bw-image w-full h-full object-cover group-hover:scale-110">
+                    </div>
+                    <div class="p-3 border-t border-luxuryBorder flex justify-between items-center text-xs font-mono text-zinc-400">
+                        <span>06. Closing Gala</span>
+                        <span class="text-zinc-500">4:3 Uniform</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes & Retrospective Section -->
+    <section id="outcomes" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-luxuryCard border border-luxuryBorder rounded-2xl p-8 sm:p-12">
+            <div class="font-mono text-xs text-luxuryGray tracking-widest uppercase">04 / SUMMARY & RETROSPECTIVE</div>
+            <h2 class="font-serif text-3xl font-bold text-white mt-2 mb-6">Key Strategic Outcomes</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-zinc-300">
+                <div class="p-5 border border-luxuryBorder rounded-lg bg-zinc-950/60">
+                    <i class="fa-solid fa-trophy text-white text-xl mb-3"></i>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">High Attendee Engagement</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Achieved a record net promoter score (NPS 84) with participants rating the dual-format workshops as exceptionally actionable.</p>
+                </div>
+
+                <div class="p-5 border border-luxuryBorder rounded-lg bg-zinc-950/60">
+                    <i class="fa-solid fa-file-contract text-white text-xl mb-3"></i>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">100% On-Budget Delivery</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Managed vendor contracts, catering, equipment rentals, and venue fees seamlessly within allocated operational budgets.</p>
+                </div>
+
+                <div class="p-5 border border-luxuryBorder rounded-lg bg-zinc-950/60">
+                    <i class="fa-solid fa-share-nodes text-white text-xl mb-3"></i>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Digital Reach Expansion</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">Generated over 45,000 organic social impressions and post-event media mentions across key tech publications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fancy Black & White Lightbox Modal -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-lg flex items-center justify-center p-4 transition-all duration-300 opacity-0">
+        <!-- Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-zinc-400 hover:text-white p-3 rounded-full bg-zinc-900 border border-zinc-800 hover:border-white transition-all focus:outline-none">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+
+        <div class="max-w-5xl max-h-[90vh] flex flex-col items-center">
+            <img id="lightboxImage" src="" alt="Expanded View" class="max-w-full max-h-[78vh] object-contain rounded-lg border border-zinc-800 shadow-2xl">
+            <div class="mt-4 flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                <p id="lightboxCaption" class="text-zinc-300 font-mono text-xs tracking-wider uppercase text-center"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 border-t border-luxuryBorder py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-between flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-zinc-500 gap-4">
+            <div>
+                © 2025 School Leadership Gathering &bull; Rizan
+            </div>
+            <div>
+                Hosted on GitHub Pages
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        const modal = document.getElementById('lightboxModal');
+        const modalImg = document.getElementById('lightboxImage');
+        const modalCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(src, caption) {
+            modalImg.src = src;
+            modalCaption.innerText = caption;
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+            }, 300);
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeLightbox();
+        });
+    </script>
+</body>
+</html>
